@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/home_page.dart';
+import 'package:flutter_application_1/theme/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,12 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'simple-app-with-dark-mode',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
-        ),
-        useMaterial3: true,
-      ),
+      theme: lightMode,
+      darkTheme: darkMode,
       home: const MyHomePage(),
     );
   }
